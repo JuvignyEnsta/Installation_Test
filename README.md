@@ -1,32 +1,30 @@
 # Installation_Test
 
-Test l'installation des différents outils nécessaires au cours IN203
+Tests de l'installation des différents outils nécessaires au cours IN203.
 
-## Comment exécuter le test ?
+## Pré-requis
 
-Si vous avez installé MSYS 2, éditer le fichier "Makefile" et commenter la première ligne :
+### Utilisateurs sous environnement Windows et MSYS 2
 
-    include Make.inc
+Editer le fichier "Makefile" comme suit :
 
-et décommentez la deuxième ligne
-
+    # include Make.inc
     include Make_msys2.inc
 
-Si vous êtes sous environnement MacOS, commencez par installer homebrew si ce n'est déjà fait, puis installer g++ et openmpi :
+### Utilisateurs sous environnement MacOS
+
+Procéder à l'installation de homebrew, puis des paquets gcc et open-mpi :
 
     $ brew install gcc open-mpi
 
-Éditer ensuite le fichier "Makefile" et commenter la première ligne :
+Éditer ensuite le fichier "Makefile" comme suit :
 
-    include Make.inc
-
-et décommentez la troisième ligne
-
+    # include Make.inc
     include Make_osx.inc
 
-NB : cela présuppose que vous ayez installé homebrew, puis g++ et opmenmpi au sein de homebrew.
+## Exécution du test
 
-Puis tapez
+Tapez :
 
     make test
 
