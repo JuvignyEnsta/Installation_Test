@@ -1,5 +1,6 @@
 include Make.inc
 #include Make_msys2.inc
+#include Make_osx.inc
 
 CXXOPT = -g -Wall -pedantic -std=c++11 -fopenmp
 
@@ -18,4 +19,3 @@ test: test_mpi.exe test_omp.exe
 
 clean:
 	@rm -f *.exe *~ 
-
